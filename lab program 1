@@ -1,0 +1,88 @@
+1.a)Calculate the factorial of a number
+
+
+package oops;
+import java.util.*;
+public class array {
+	public static void main(String[] args) {
+		int sum=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Szie of Array");
+		int n=sc.nextInt();
+		int a[]={1,2,3,4,5,6,7,8,9,10};
+		int i=0;
+		
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		System.out.println("Enter the Array number");
+		for(i=0; i<n; i++)
+		{
+			sum=sum+a[i];
+		}
+		System.out.println("The sum of Array numbers is :"+sum);	
+	}
+
+}
+
+1.b)to print prime numbers using CLA
+
+package oops;
+
+import java.util.Scanner;
+
+public class prime {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int f=0;
+		int c=2;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n=sc.nextInt();
+		for(c=2;c<=n/2; c++)
+		{
+			if(n%c==0)
+			{
+				f=1;
+				break;
+			}
+		}
+		if(f==0)
+		{
+			System.out.println("the entered number is ptime "+n);
+		}
+		else
+		{
+			System.out.println("the entered number is not ptime "+n);
+	    }
+	
+	
+
+
+	}
+
+}
+
+1.c)to convert temperature from Fahrenheit to Celsius using CLA
+
+package oops;
+
+import java.util.Scanner;
+
+public class celsius {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int c=sc.nextInt();
+		float f;
+		f=(c*9)/5+32;
+		System.out.println("the temperature is :" +f);
+
+	}
+	
+
+}
+
+
