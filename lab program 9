@@ -1,0 +1,57 @@
+9.) Program to create customized exception
+
+package oops;
+class NewExcp extends Exception{
+	public NewExcp(String s)
+	{
+		super(s);
+	}
+}
+
+class NewExcp2 extends Exception{
+	int x;
+	public NewExcp2(int a)
+	{
+		x=a;
+	}
+	public String Stringto(int a)
+	{
+		return "NEwExcp2";
+	}
+}
+public class excep2 {
+	static void compute(int a) throws NewExcp2{
+		System.out.println("catch of a is " + a);
+		if(a>10)
+		{
+			throw new NewExcp2(a);
+		}
+		System.out.println("There is no Excp is created");
+	}
+
+	public static void main(String[] args) throws NewExcp{
+		System.out.println("One type of creating the Custom Exception");
+		try {
+			throw new NewExcp("demo");
+		}
+		catch(NewExcp e)
+		{
+			System.out.println("Catch "+e);
+		}
+		
+		System.out.println("Second type of creating the Custom Exception");
+		try {
+			//throw new NewExcp2("Demo 2");
+			compute(5);
+			compute(20);
+		}
+		catch(NewExcp2 e)
+		{
+			System.out.println("Catch 2 "+e);
+		}
+		
+	}
+}
+
+
+
